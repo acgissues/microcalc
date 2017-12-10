@@ -24,7 +24,7 @@ class NodoProducto:
     return "( " + self.izdo.__str__() + " * " + self.dcho.__str__() + " )"
     
 
-class NodoValor:
+class NodoEntero:
  
   def __init__(self,valor):
     self.valor = valor
