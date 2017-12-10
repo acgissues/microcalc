@@ -1,4 +1,5 @@
 from componentes import *
+from errores import *
 
 class Lexico:   
 
@@ -24,3 +25,5 @@ class Lexico:
       elif self.cadena[self.pos] == '\n':
         self.pos = self.pos + 1
         return Nl()
+      else:
+          ErrorLexico()

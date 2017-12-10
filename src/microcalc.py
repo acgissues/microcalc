@@ -1,23 +1,21 @@
-#!/usr/bin/python
-
-from sintactico import *
-import sys
+from sintactico import Sintactico
+from lexico import Lexico
+from AST import *
+from sys import stdin
+from errores import *
 
 if __name__ == '__main__':
+    while True:
+        linea = stdin.readline()
 
-  
-  linea = sys.stdin.readline()
+        if linea == '\n':
+            break
 
-  print linea
-  
-  lexico = Lexico(linea)
-  while True:
-    componente= lexico.siguiente()
-    print componente
-    if componente.cat== 'eof':
-      break
+        try:
+            lexico = Lexico(linea)
+            sintactico = Sintactico(lexico)
 
-
-
-#  sintactico = Sintactico(lexico)
-#  sintactico.analizaLinea()
+            expresion = sintactico.analizaLinea()
+            print "La expresion es : " + str(expresion) + " = " + str(expresion.evalua())
+        except Exception:
+            print "Error en ejecucion"
