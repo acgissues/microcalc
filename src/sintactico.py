@@ -48,6 +48,9 @@ class Sintactico:
             arbol = NodoEntero(self.componente.valor)
             self.componente = self.lexico.siguiente()
             return arbol
+        elif self.componente.cat == 'Cadena':
+            arbol = NodoCadena(self.componente.texto)
+            self.componente = self.lexico.siguiente()
         elif self.componente.cat == 'Apar':
             self.componente = self.lexico.siguiente()
             arbol = self.analizaExpresion()

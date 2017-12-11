@@ -56,3 +56,14 @@ class NodoEntero:
     
   def __str__(self):
     return str(self.valor)
+
+class NodoCadena:
+ 
+  def __init__(self,valor):
+    self.valor = valor
+    
+  def evalua(self):
+    return self.valor
+    
+  def __str__(self):
+    return str(self.valor)
