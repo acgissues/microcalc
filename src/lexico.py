@@ -13,12 +13,18 @@ class Lexico:
                 return Eof()
             elif self.cadena[self.pos] in [' ', '\t']:
                 self.pos = self.pos + 1
+            elif self.cadena[self.pos] == '(':
+                self.pos = self.pos + 1
+                return Apar()
             elif self.cadena[self.pos].isdigit(): 
                 numero = ''
                 while(self.cadena[self.pos].isdigit()):
                     numero = numero + str(self.cadena[self.pos])
                     self.pos = self.pos + 1
                 return Entero(int(numero))
+            elif self.cadena[self.pos] == ')':
+                self.pos = self.pos + 1
+                return Cpar()
             elif self.cadena[self.pos] == '+':
                 self.pos = self.pos + 1 
                 return Suma()

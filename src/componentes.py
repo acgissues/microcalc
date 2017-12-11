@@ -39,6 +39,22 @@ class Entero:
   def __str__(self):
     return self.cat + " (valor : " + str(self.valor) + " )"
 
+class Apar:
+
+  def __init__(self):
+    self.cat = "Apar"
+
+  def __str__(self):
+    return self.cat
+
+class Cpar:
+
+  def __init__(self):
+    self.cat = "Cpar"
+
+  def __str__(self):
+    return self.cat
+
 class Nl:
 
   def __init__(self):
