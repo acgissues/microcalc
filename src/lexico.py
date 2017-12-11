@@ -21,7 +21,7 @@ class Lexico:
                 while(self.cadena[self.pos].isdigit()):
                     numero = numero + str(self.cadena[self.pos])
                     self.pos = self.pos + 1
-                return Entero(int(numero))
+                return Entero(int(numero.lstrip("0")))
             elif self.cadena[self.pos] == ')':
                 self.pos = self.pos + 1
                 return Cpar()
