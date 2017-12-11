@@ -39,6 +39,15 @@ class Entero:
   def __str__(self):
     return self.cat + " (valor : " + str(self.valor) + " )"
 
+# class Cadena:
+#
+#   def __init__(self, texto):
+#     self.cat = "Cadena"
+#     self.texto = texto
+#
+#   def __str__(self):
+#     return self.cat + " (texto : " + str(self.texto) + " )"
+
 class Apar:
 
   def __init__(self):
