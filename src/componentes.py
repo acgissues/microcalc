@@ -1,7 +1,15 @@
 class Suma:
-  
+
   def __init__(self):
     self.cat = "Suma"
+
+  def __str__(self):
+    return self.cat
+
+class Resta:
+
+  def __init__(self):
+    self.cat = "Resta"
 
   def __str__(self):
     return self.cat
@@ -10,6 +18,14 @@ class Producto:
 
   def __init__(self):
     self.cat = "Producto"
+
+  def __str__(self):
+    return self.cat
+
+class Division:
+
+  def __init__(self):
+    self.cat = "Division"
 
   def __str__(self):
     return self.cat

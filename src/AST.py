@@ -9,7 +9,18 @@ class NodoSuma:
 
   def __str__(self):
     return "( " + self.izdo.__str__() + " + " + self.dcho.__str__() + " )"
-    
+
+class NodoResta:
+
+  def __init__(self,izdo,dcho):
+    self.izdo = izdo
+    self.dcho = dcho
+
+  def evalua(self):
+    return self.izdo.evalua() - self.dcho.evalua()
+
+  def __str__(self):
+    return "( " + self.izdo.__str__() + " - " + self.dcho.__str__() + " )"
 
 class NodoProducto:
   
@@ -23,6 +34,17 @@ class NodoProducto:
   def __str__(self):
     return "( " + self.izdo.__str__() + " * " + self.dcho.__str__() + " )"
     
+class NodoDivision:
+  
+  def __init__(self,izdo,dcho):
+    self.izdo = izdo
+    self.dcho = dcho
+    
+  def evalua(self):
+    return self.izdo.evalua() / self.dcho.evalua()
+
+  def __str__(self):
+    return "( " + self.izdo.__str__() + " / " + self.dcho.__str__() + " )"
 
 class NodoEntero:
  
