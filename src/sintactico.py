@@ -48,6 +48,12 @@ class Sintactico:
             arbol = NodoEntero(self.componente.valor)
             self.componente = self.lexico.siguiente()
             return arbol
+        elif self.componente.cat == 'Apar':
+            self.componente = self.lexico.siguiente()
+            arbol = self.analizaExpresion()
+            if self.componente.cat == 'Cpar':
+                self.componente = self.lexico.siguiente()
+                return arbol
         else:
             print "Error Factor"
 
