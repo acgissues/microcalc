@@ -56,6 +56,7 @@ class NodoEntero:
     
   def __str__(self):
     return str(self.valor)
+<<<<<<< HEAD
 
 class NodoCadena:
  
@@ -67,3 +68,5 @@ class NodoCadena:
     
   def __str__(self):
     return str(self.valor)
+=======
+>>>>>>> master
